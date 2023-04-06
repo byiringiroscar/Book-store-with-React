@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <main>
       <h1>Add book</h1>
-      <FormBook addBook={addBook} />
       <CardContainer bookList={bookList} />
+      <FormBook addBook={addBook} />
     </main>
   );
 };
