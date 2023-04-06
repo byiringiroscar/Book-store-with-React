@@ -78,7 +78,8 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-- **[Set up project ]**
+- **[Add form for adding book and author ]**
+- **[Add button in the categories page ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,8 +187,9 @@ Example command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add basic interface]**
-- [ ] **[Add basic dummy data]**
+- [ ] **[Add good design interface]**
+- [ ] **[Add basic real data]**
+- [ ] **[Apply Create, Read, Update and Delete]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
