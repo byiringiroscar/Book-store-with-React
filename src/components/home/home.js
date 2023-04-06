@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FormBook from './form';
 import CardContainer from './card';
 
-const Home = () => (
-  <main>
-    <h1>Add book</h1>
-    <FormBook />
-    <CardContainer />
-  </main>
-);
+const Home = () => {
+  const [bookList, setBookList] = useState([
+    { title: 'Fight with lion', author: 'Oscar zuba' },
+    { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
+    { title: 'To Kill a Mockingbird', author: 'Harper Lee' },
+    { title: '1984', author: 'George Orwell' },
+  ]);
+  const addBook = (title, author) => {
+    const newBookList = [...bookList, { title, author }];
+    setBookList(newBookList);
+  };
+  return (
+    <main>
+      <h1>Add book</h1>
+      <FormBook addBook={addBook} />
+      <CardContainer bookList={bookList} />
+    </main>
+  );
+};
 
 export default Home;
