@@ -56,9 +56,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math Magician] <a name="about-project"></a>
+# 📖 [Book store] <a name="about-project"></a>
 
-**[Math Magician]** Book store is project for storing book and view it 
+**[Book store]** Book store is project for storing book and view it 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
