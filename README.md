@@ -87,7 +87,7 @@ After you're finished please remove all the comments and instructions!
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://math-magician-9ofy.onrender.com/)
+- [Live Demo Link](comming soon)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -117,7 +117,6 @@ Clone this repository to your desired folder by:
 
 ```
 git clone https://github.com/byiringiroscar/Book-store-with-React
-
 ```
 
 <!--
@@ -136,7 +135,6 @@ Install this project with:
 
 ```
 cd Math-magician-react
-
 ```
 
 <!--
@@ -156,12 +154,10 @@ To run the project make sure **[Node js ]** installed correctly then , execute t
 - npm install
 ```
 npm install
-
 ```
 - npm start
 ```
 npm start
-
 ```
 
 <!--
