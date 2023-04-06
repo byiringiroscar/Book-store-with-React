@@ -24,6 +24,7 @@ const Card = (props) => {
           {book.author}
         </li>
       </ul>
+      <button type="button">Remove book</button>
     </div>
   );
 };
