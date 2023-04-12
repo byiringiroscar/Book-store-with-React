@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook } from '../../redux/books/booksSlice';
 
-const FormBook = ({ addBook }) => {
+const FormBook = () => {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const booksAll = useSelector((state) => state.books.books);
+  const bookCount = booksAll.length;
   const handleSubmit = (event) => {
     event.preventDefault();
-    addBook(title, author);
+    dispatch(addBook({ item_id: `item${bookCount + 1}`, title, author }));
     setTitle('');
     setAuthor('');
   };
@@ -17,9 +21,6 @@ const FormBook = ({ addBook }) => {
       <button type="submit">Add Book</button>
     </form>
   );
-};
-FormBook.propTypes = {
-  addBook: PropTypes.func.isRequired,
 };
 
 export default FormBook;
