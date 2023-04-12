@@ -77,10 +77,10 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-[x] Add form for adding book and author 
-[x] Add button in the categories page
-[x] Add book
-[x] Remove Book
+- **[Add form for adding book and author  ]**
+- **[Add book ]**
+- **[ Remove Book ]**
+- **[ Display Book ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
