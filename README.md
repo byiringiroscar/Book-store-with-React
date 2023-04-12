@@ -77,8 +77,10 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add form for adding book and author ]**
-- **[Add button in the categories page ]**
+[x] Add form for adding book and author 
+[x] Add button in the categories page
+[x] Add book
+[x] Remove Book
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,6 +185,7 @@ Example command:
 
 - [ ] **[Add good design interface]**
 - [ ] **[Add basic real data]**
+- [ ] **[Use API]**
 - [ ] **[Apply Create, Read, Update and Delete]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
