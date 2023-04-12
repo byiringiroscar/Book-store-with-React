@@ -41,7 +41,6 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -78,16 +77,12 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-- **[Set up project ]**
+- **[Add form for adding book and author ]**
+- **[Add button in the categories page ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](comming soon)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -186,8 +181,9 @@ Example command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add basic interface]**
-- [ ] **[Add basic dummy data]**
+- [ ] **[Add good design interface]**
+- [ ] **[Add basic real data]**
+- [ ] **[Apply Create, Read, Update and Delete]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
