@@ -24,7 +24,7 @@ const CardContainer = () => {
         <div className="card" key={uuidv4()}>
           <ul>
             <li>
-              num item:
+              Title:
               {book.title}
             </li>
             <li>
