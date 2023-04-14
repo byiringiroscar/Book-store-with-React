@@ -12,11 +12,11 @@ const CardContainer = () => {
   }, [dispatch]);
 
   if (isLoading) {
-    return <p>please wait it is loading...</p>;
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <p>Error occurred while fetching books</p>;
+    return <p>Error occurred</p>;
   }
   return (
     <div className="card-container">
@@ -24,7 +24,6 @@ const CardContainer = () => {
         <div className="card" key={uuidv4()}>
           <ul>
             <li>
-              {/* // code here */}
               num item:
               {book.title}
             </li>
