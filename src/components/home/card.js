@@ -1,58 +1,51 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-import { getBooks } from '../../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { getBooks, removeBook } from '../../redux/books/booksSlice';
 
 const CardContainer = () => {
-  const book = useSelector((state) => state.books);
+  const { books, isLoading, error } = useSelector((state) => state.books);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
-  console.log(book.books);
+
+  if (isLoading) {
+    return <p>please wait it is loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error occurred while fetching books</p>;
+  }
   return (
     <div className="card-container">
-      {book.loading && <div>Loading ...</div>}
-      {!book.loading && book.error ? <div>{book.error}</div> : null}
-      {!book.loading && !book.error ? (
-        Object.keys(book.books).map((key) => (
-          book.books[key].map((bookSingle) => (
-            <Card key={bookSingle.title} bookSingle={bookSingle} />
-          ))
-        ))
-      ) : null}
-      {/* {books.map((book) => (<Card book={book} key={book.item_id} />))} */}
+      {books.map((book) => (
+        <div className="card" key={uuidv4()}>
+          <ul>
+            <li>
+              {/* // code here */}
+              num item:
+              {book.title}
+            </li>
+            <li>
+              Author:
+              {book.author}
+            </li>
+          </ul>
+          <button
+            type="button"
+            id="button"
+            className="remove-btn"
+            onClick={() => {
+              dispatch(removeBook(book.item_id));
+            }}
+          >
+            remove
+          </button>
+        </div>
+      ))}
     </div>
   );
-};
-
-const Card = (props) => {
-  const { bookSingle } = props;
-  return (
-    <div className="card">
-      <ul>
-        <li>
-          Book:
-          {bookSingle.title}
-        </li>
-        <li>
-          Author:
-          {bookSingle.author}
-        </li>
-      </ul>
-      <button
-        type="button"
-      >
-        Remove book
-      </button>
-    </div>
-  );
-};
-Card.propTypes = {
-  bookSingle: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
 };
 export default CardContainer;
