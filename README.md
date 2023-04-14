@@ -184,9 +184,7 @@ Example command:
 
 
 - [ ] **[Add good design interface]**
-- [ ] **[Add basic real data]**
-- [ ] **[Use API]**
-- [ ] **[Apply Create, Read, Update and Delete]**
+- [ ] **[Apply Update]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
