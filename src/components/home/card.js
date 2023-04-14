@@ -1,47 +1,55 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../../redux/books/booksSlice';
+import { getBooks } from '../../redux/books/booksSlice';
 
 const CardContainer = () => {
-  const books = useSelector((state) => state.books.books);
+  const book = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+  console.log(book.books);
   return (
     <div className="card-container">
-      {books.map((book) => (<Card book={book} key={book.title} />))}
+      {book.loading && <div>Loading ...</div>}
+      {!book.loading && book.error ? <div>{book.error}</div> : null}
+      {!book.loading && !book.error ? (
+        Object.keys(book.books).map((key) => (
+          book.books[key].map((bookSingle) => (
+            <Card key={bookSingle.title} bookSingle={bookSingle} />
+          ))
+        ))
+      ) : null}
+      {/* {books.map((book) => (<Card book={book} key={book.item_id} />))} */}
     </div>
   );
 };
 
 const Card = (props) => {
-  const { book } = props;
-  const dispatch = useDispatch();
+  const { bookSingle } = props;
   return (
     <div className="card">
       <ul>
         <li>
           Book:
-          {book.title}
+          {bookSingle.title}
         </li>
         <li>
           Author:
-          {book.author}
+          {bookSingle.author}
         </li>
       </ul>
       <button
         type="button"
-        onClick={() => {
-          dispatch(removeBook(book.item_id));
-        }}
       >
         Remove book
       </button>
     </div>
   );
 };
-
 Card.propTypes = {
-  book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
+  bookSingle: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
