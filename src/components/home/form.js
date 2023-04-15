@@ -27,17 +27,20 @@ const FormBook = () => {
     setCategory('');
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Add book" value={title} onChange={(e) => setTitle(e.target.value)} required />
-      <input type="text" placeholder="Add author" value={author} onChange={(e) => setAuthor(e.target.value)} required />
-      <select id="category" name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="fiction">Fiction</option>
-        <option value="non-fiction">NonFiction</option>
-        <option value="mystery">Mystery</option>
-        <option value="sci-fi">Science Fiction</option>
-      </select>
-      <button type="submit">Add Book</button>
-    </form>
+    <section>
+      <h2 className="form-title">Add new book</h2>
+      <form onSubmit={handleSubmit} className="add-form">
+        <input type="text" className="input title-input" placeholder="Add book" value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <input type="text" className="input title-author" placeholder="Add author" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+        <select id="category" className="input category-input" name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">NonFiction</option>
+          <option value="mystery">Mystery</option>
+          <option value="sci-fi">Science Fiction</option>
+        </select>
+        <button className="primary-button-big" type="submit">Add Book</button>
+      </form>
+    </section>
   );
 };
 
