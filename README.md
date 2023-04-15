@@ -77,7 +77,6 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add form for adding book and author  ]**
 - **[Add book ]**
 - **[ Remove Book ]**
 - **[ Display Book ]**
@@ -183,8 +182,9 @@ Example command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add good design interface]**
-- [ ] **[Apply Update]**
+
+- [ ] **[Apply Edit]**
+- [ ] **[Work progressBar]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
